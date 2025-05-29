@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+
+# Environment
+.env
+.venv/
+env/
+venv/
+*.env
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# YOLOv8 Training outputs
+runs/
+*.pt
+*.onnx
+*.engine
+*.torchscript
+*.mlmodel
+
+# Dataset cache and augmentation
+*.cache
+*.log
+*.tmp
+*.zip
+*.tar.gz
+
+# Label and image folders (optional if you version datasets)
+training/images/
+training/labels/
+training/videos/
+
+# Colab or Jupyter outputs
+*.ipynb
+*.nbconvert.ipynb
+
+# Logs, results
+results/
+yolo_results/
+*.csv
+*.json
+
+# Model checkpoints
+weights/
+checkpoints/
