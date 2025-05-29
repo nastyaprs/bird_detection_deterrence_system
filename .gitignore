@@ -39,6 +39,7 @@ runs/
 training/images/
 training/labels/
 training/videos/
+training/result
 
 # Colab or Jupyter outputs
 *.ipynb
