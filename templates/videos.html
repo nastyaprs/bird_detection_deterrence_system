@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Записані відео</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-4">
+    <div class="container">
+        <h2 class="mb-4">Записані відео</h2>
+        {% if videos %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Камера</th>
+                    <th>Час початку</th>
+                    <th>Час завершення</th>
+                    <th>Примітка</th>
+                    <th>Перегляд</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for video in videos %}
+                <tr>
+                    <td>{{ video.id }}</td>
+                    <td>{{ video.camera.name }}</td>
+                    <td>{{ video.start_time }}</td>
+                    <td>{{ video.end_time }}</td>
+                    <td>{{ video.note }}</td>
+                    <td>
+                       <video width="320" controls>
+                            <source src="/{{ video.file_path | replace('\\', '/') }}" type="video/mp4">
+                            Ваш браузер не підтримує відтворення відео.
+                        </video>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>Відео не знайдено.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

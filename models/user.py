@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, Text, TIMESTAMP
 from . import Base
 from .enums.user_role import UserRole
+from sqlalchemy.orm import relationship
 
 class User(Base):
     __tablename__ = 'users'
@@ -11,4 +12,6 @@ class User(Base):
     created_at = Column(TIMESTAMP)
     name = Column(Text)
     surname = Column(Text)
-    role = Column(Text, default=UserRole.user) 
+    role = Column(Text, default=UserRole.user.value) 
+
+    permissions = relationship("DeterrencePermission", back_populates="user")

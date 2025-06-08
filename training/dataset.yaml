@@ -1,5 +1,0 @@
-train: images/train/images
-val: images/valid/images
-
-nc: 1
-names: ['bird']

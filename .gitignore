@@ -22,7 +22,6 @@ Thumbs.db
 
 # YOLOv8 Training outputs
 runs/
-*.pt
 *.onnx
 *.engine
 *.torchscript
@@ -54,3 +53,5 @@ yolo_results/
 # Model checkpoints
 weights/
 checkpoints/
+
+static/videos

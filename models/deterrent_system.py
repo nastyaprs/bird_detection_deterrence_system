@@ -5,5 +5,5 @@ class DeterrentSystem(Base):
     __tablename__ = 'deterrent_systems'
     id = Column(Integer, primary_key=True)
     name = Column(Text, unique=True)
-    type = Column(Text, 'laser')
+    type = Column(Text, default='laser')
     model = Column(Text)
